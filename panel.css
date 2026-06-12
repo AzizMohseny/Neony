@@ -353,7 +353,7 @@ font-size: 12px;
 }
 
 @font-face {
-    font-family: 'ParchamStroke';
+    font-family: 'Parcham';
     src: url('fonts/ParchamStroke.ttf') format('truetype');
 }
 
@@ -361,7 +361,22 @@ font-size: 12px;
     font-family: 'NP Naipol All in One_r';
     src: url('fonts/NP Naipol All in One_r.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Gloomy';
+    src: url('fonts/GloomyUnseenSingleLine-lg37Z.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Headstay';
+    src: url('fonts/HeadstaySingleLine-ywDmY.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Saily';
+    src: url('fonts/The Saily.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Znik';
+    src: url('fonts/Znikoslsvginot8-GOB3y.ttf) format('truetype');
+}
 .size-row {
     display: flex;
     align-items: center;
