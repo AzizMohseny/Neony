@@ -1,0 +1,627 @@
+
+
+.neon-panel {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  direction: ltr;
+  overflow-y: auto;
+font-size: 12px;
+}
+
+
+<div id="<div id="effect-tooltip"
+.neon-panel-header {
+    background: #8d8d8d;     /* خاکستری */
+    height: 20px;
+    border: 1px solid #6b6b6b; 
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.neon-panel-header .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;            /* متن سفید */
+    font-weight: bold;
+    font-size: 14px;         /* اندازه کوچک‌تر، چون هدر باریک است */
+    pointer-events: none;    /* برای جلوگیری از مزاحمت */
+}
+
+
+.neon-panel textarea{
+    width:100%;
+    height:110px;
+    box-sizing:border-box;
+    text-align:center;
+    resize:none;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.neon-panel select,
+.neon-panel .align-btn{
+    width:100%;
+    margin-bottom:5px;
+}
+
+.align-row{
+    display:flex;
+    gap:5px;
+}
+
+.neon-controls{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.color-keeper{
+    width:100%
+    height:30px;
+    border-radius:3px;
+    border:1px solid #ccc;
+    cursor:pointer;
+}
+
+.type-box{
+    width:32px;
+    height:32px;
+    border:1px solid #ccc;
+    background:white;
+    margin-left:5px;
+    cursor:pointer;
+}
+
+.size-row{
+    display:flex;
+    gap:5px;
+    margin-bottom:5px;
+}
+
+.render-btn{
+    width:100%;
+    background:#5ede72;
+    border:1px;
+    border-radius:4px;
+    padding:8px;
+    color:white;
+    cursor:pointer;
+}
+
+
+/* نسخه صحیح مانیتور */
+.monitor {
+    position: relative;
+    overflow: hidden; /* مهم */
+}
+
+
+/* === متن داخل کادر === */
+
+.textareaWrapper {
+    position: relative;
+}
+
+.textTools {
+    position: absolute;
+    bottom: 4px;         /* فاصله از پایین */
+    right: 6px;          /* فاصله از راست */
+    left: 6px;           /* تا چپ کشیده شود */
+    display: flex;
+       align-items: center;
+    font-size: 12px;     /* کوچکتر */
+    pointer-events: none; /* اختیاری: تا کلیک به textarea برسد */
+    opacity: 0.7;        /* کمی淡 */
+}
+
+.dirIcon {
+    margin: 0 2px;
+    cursor: pointer;
+    pointer-events: auto; /* این یکی باید کلیک شود */
+}
+
+.dirIcon.active {
+    font-weight: bold;
+}
+
+.charCount {
+    font-size: 12px;
+}
+.dirIcon[data-dir="ltr"] {
+    transform: scaleX(-1);     /* میرور افقی */
+    display: inline-block;     /* لازم برای transform */
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* آیکن وسط */
+.icon-btn[data-align="center"] {
+    background-image: url("assets/center.svg");
+    transform: none;
+}
+
+/* همان آیکن ولی آینه برای چپ */
+.icon-btn[data-align="left"] {
+    background-image: url("assets/right.svg");
+    transform: scaleX(-1);
+}
+
+/* راست مثل خود فایل */
+.icon-btn[data-align="right"] {
+    background-image: url("assets/right.svg");
+    transform: none;
+}
+
+.icon-btn.active {
+    filter: brightness(1.2);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#Neonestoon {
+    font-size: 2.5rem;
+    white-space: pre-wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    isolation: isolate;
+
+    /* کنترل شدت بدون دست زدن به رنگ‌ها */
+    --neon-intensity: 1;
+    opacity: var(--neon-intensity);
+
+    transition: none;
+}
+
+
+
+
+.align-line-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.align-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.line-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.divider {
+    width: calc(100% - 6px);
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 3px 0;
+}
+
+
+.gif-row {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+}
+
+.gif-box {
+  width: 32px;      /* اندازه دکمه */
+  height: 32px;
+  cursor: pointer;
+  border: 1px solid #444;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+
+}
+
+.gif-box:hover {
+  transform: scale(1.05);
+  border-color: var(--neon);
+}
+
+.gif-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.render-size-block{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.render-size-row{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.rs-icon{
+    width:16px;
+    height:16px;
+    opacity:0.7;
+}
+
+.rs-icon.rotate{
+    transform: rotate(90deg);
+}
+
+.render-size-row input{
+    width:60px;
+    height:20px;
+    padding:0 6px;
+    font-size:13px;
+}
+#colorPicker {
+    width: 100%;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+.color-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-image-option {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 13px;
+}
+
+
+
+.bg-image-option input[type="radio"] {
+    margin-right: 6px;
+    transform: scale(1.1);
+}
+
+
+.gif-render-btn {
+    width: 100%;
+    height: 40px;           /* ارتفاع فیکس شده و کمتر */
+    margin-top: 20px;       /* فاصله از المان بالایی که تو هم نرن */
+    background-color: #09d621; 
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s;
+
+    /* ایجاد حالت بیول (لبه دار) */
+    box-shadow: 0 5px 0 #1e7e34; 
+}
+
+/* حالت کلیک شده (فرو رفتن) */
+.gif-render-btn:active {
+    box-shadow: 0 2px 0 #059a17; /* لبه زیرین کوتاه می‌شود */
+    transform: translateY(3px);   /* خود دکمه پایین می‌رود */
+}
+
+/* حذف خط دور دکمه موقع کلیک */
+.gif-render-btn:focus {
+    outline: none;
+}
+
+
+
+@font-face {
+    font-family: 'Charmline';
+    src: url('fonts/CharmlineScriptPersonalUse-17EB.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'PixHole';
+    src: url('fonts/WC_PixHole_bta_Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Abnoos';
+    src: url('fonts/Abnoos-30.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ParchamStroke';
+    src: url('fonts/ParchamStroke.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NP Naipol All in One_r';
+    src: url('fonts/NP Naipol All in One_r.ttf') format('truetype');
+}
+
+.size-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.size-row select {
+    height: 20px;
+    font-size: 13px;
+}
+
+.fontStyleSelect {
+    flex: 1.2;   /* پهن‌تر برای Regular */
+}
+
+.size-row .label {
+    flex: 0;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.sizeSelect {
+    flex: 0.7;   /* کوچک‌تر برای 120pt */
+}
+#floatingSizeSlider,
+#floatingLineHeightSlider {
+    position: fixed !important;
+    z-index: 99999 !important;
+}
+#floatingSizeSlider input[type="range"],
+#floatingLineHeightSlider input[type="range"] {
+    direction: ltr;
+}
+
+.choose-img-btn {
+  margin-top: 6px;
+  width: 100%;
+  height: 34px;
+  border: 1px solid #666;
+  background: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.bg-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+
+/* ✅ FIX FLOATING SLIDERS */
+#floatingSizeSlider,
+#floatingLineHeightSlider {
+    position: fixed !important;
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
+}
+
+/* ✅ جلوگیری از clip شدن */
+.neon-panel,
+.monitor {
+    overflow: visible !important;
+}
+
+/* بزرگ کردن کادرها و فاصله مناسب */
+.rs-width, .rs-height {
+    width: 90px !important; /* عرض کادر را بیشتر کردیم */
+    height: 30px;
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* حذف کردن فلش‌های بالا و پایین خودِ عدد (Spinners) */
+/* این کار باعث می‌شود فقط فلش لیست پیشنهادی باقی بماند و ظاهر تمیز شود */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* چیدمان مرتب آیکون و ورودی */
+.size-input-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.icon {
+    font-size: 18px;
+    color: #666;
+}
+.template-row {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.template-box {
+  width: 32px;      /* اندازه دکمه */
+  height: 32px;
+  cursor: pointer;
+  border: 1px solid #444;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+
+}
+
+.template-box:hover {
+  transform: scale(1.05);
+  border-color: var(--neon);
+}
+
+.template-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.safe-area {
+    position: absolute;
+    top: 5%; /* یا 4% اگر ترجیح می‌دهی */
+    left: 5%; /* یا 4% */
+    bottom: 5%; /* یا 4% */
+    right: 5%; /* یا 4% */
+    border: 1px dashed cyan;
+    pointer-events: none; /* مهم: این باعث می‌شود کادر قابل کلیک نباشد */
+    z-index: 999; /* مطمئن شو که بالای همه چیز است */
+    box-sizing: border-box; /* برای اینکه border حساب شود */
+}
+/* استایل دکمه‌های الاینمنت وقتی فعال هستند */
+.icon-btn[data-align].active {
+    background-color: #555; /* یا هر رنگی که در تم پنل تو مشخص است */
+    border: 1px solid cyan;  /* یک کادر کوچک سایان دور دکمه فعال */
+    box-shadow: 0 0 5px cyan; /* درخشش ملایم */
+}
+
+/* استایل آیکون‌های داخل دکمه در حالت فعال (اختیاری) */
+.icon-btn[data-align].active::before {
+    filter: brightness(1.5);
+}
+
+
+#effect-tooltip {
+    display: none; /* پیش‌فرض مخفی */
+    position: absolute;
+    background: #fef9c1 !important;
+    color: #7f7f7f !important;
+    /* تنظیم پدینگ برای ارتفاع متناسب با فونت */
+    padding: 2px 6px !important; 
+    font-size: 9px !important; /* کمی بزرگتر برای خوانایی */
+    line-height: 1 !important; /* برای اینکه ارتفاع دقیقاً با فونت ست شود */
+    font-weight: light !important;
+    border-radius: 0px !important; /* گوشه‌های تیز */
+    border: 1px solid #ccc; /* یک حاشیه نازک برای زیبایی */
+    box-shadow: none !important; /* حذف سایه */
+    pointer-events: none !important;
+    z-index: 9999 !important;
+    white-space: nowrap; /* جلوگیری از شکستن خط */
+}
+
+
+/* پاپ‌آپ حمایتی - استایل جدید */
+#support-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) !important; /* پس‌زمینه نیمه‌شفاف */
+    z-index: 99999 !important;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#support-popup .popup-content {
+    background: #f0f0f0 !important; /* رنگ زمینه درخواستی */
+    color: #000 !important;         /* رنگ متن مشکی */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#support-popup p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000 !important; /* تأکید بر مشکی بودن متن */
+}
+
+#support-popup .btn-confirm {
+    background-color: #09d621 !important; /* سبز درخواستی */
+    color: #fff !important;              /* متن روی دکمه سفید */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+// تستِ وجودِ دکمه
+console.log('Checking saveGifBtn:', saveGifBtn);
+if (!saveGifBtn) {
+    console.error('ERROR: saveGifBtn not found! Check HTML ID.');
+} else {
+    saveGifBtn.addEventListener('click', () => {
+        console.log('SUCCESS: Click detected on Save Gif button!');
+    });
+}
+
+.warning-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+
+    z-index: 99999;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.warning-box {
+
+    background: #222;
+
+    color: #fff;
+
+    padding: 20px;
+
+    min-width: 280px;
+
+    border: 1px solid #555;
+}
+
+.warning-title {
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+#warning-ok {
+
+    margin-top: 15px;
+
+    width: 100%;
+}

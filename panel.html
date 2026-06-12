@@ -1,0 +1,208 @@
+
+<div class="neon-panel">
+
+    <!-- Header -->
+    <div class="neon-panel-header">
+        <span class="title">NEON</span>
+    </div>
+
+    <!-- Body -->
+    <div class="panelBody">
+
+        <div class="textareaWrapper">
+
+            <textarea
+                id="textbox"
+                class="textbox"
+                placeholder="متن را وارد کنید"
+            ></textarea>
+<div class="textTools">
+
+                <span class="dirIcon active" data-dir="rtl">¶</span>
+                <span class="dirIcon" data-dir="ltr">¶</span>
+
+                <span class="charCount">0/100</span>
+
+            </div>
+
+        </div>
+<!-- سطر اول: انتخاب فونت + دکمه‌های تراز -->
+<div class="row first-row" style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap;">
+    <select id="fontSelect" style="flex: 2; min-width: 120px;">
+        <option value="Charmline">Charmline</option>
+        <option value="PixHole">PixHole</option>
+        <option value="Abnoos">Abnoos</option>
+        <option value="ParchamStroke">Parcham</option>
+        <option value="NP Naipol All in One_r">Naipol</option>
+    </select>
+    <div class="align-buttons" style="display: flex; gap: 6px;">
+        <button class="icon-btn" data-align="left"></button>
+        <button class="icon-btn" data-align="center"></button>
+        <button class="icon-btn" data-align="right"></button>
+    </div>
+</div>
+
+<!-- سطر دوم: سایز فونت (تمام عرض) -->
+<div class="row second-row" style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+    <span class="label">Font<br>Size:</span>
+    <select class="sizeSelect" style="flex: 1; min-width: 0;">
+        <option value="120">120 pt</option>
+    </select>
+</div>
+
+<div class="divider"></div>
+
+
+<div class="template-row">
+<div class="label">Neon<br>Type</div>
+    <div class="template-box" data-template="nx-t1">
+    <img src="assets/1.gif">
+  </div>
+    <div class="template-box" data-template="nx-t2">
+    <img src="assets/2.gif">
+</div>
+    <div class="template-box" data-template="nx-police">
+    <img src="assets/P.gif">
+</div>
+</div>
+
+
+<div class="divider"></div>
+
+	<div class="gif-row">
+	<div class="gif-box" data-effect="flicker"><img src="assets/flicker.gif"></div>
+	<div class="gif-box" data-effect="starter"><img src="assets/starter.gif"></div>
+	<div class="gif-box" data-effect="blink"><img src="assets/blink.gif"></div>
+	<div class="gif-box" data-effect="crazy"><img src="assets/crazy.gif"></div>
+	<div class="gif-box" data-effect="lantern"><img src="assets/lantern.gif"></div>
+	</div>
+
+<div id="effect-tooltip"></div>
+
+<div class="divider"></div>
+
+        <div class="colors">
+            <div class="color-box">
+                <input type="color" id="colorPicker" value="#ff00fc">
+               <span>Color</span>
+            </div>
+        </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="bg-row">
+      <input type="checkbox" id="bgImageToggle">
+  <button id="chooseImageBtn">Choose Image</button>
+  <input type="file" id="bgImageInput" accept=".png,.jpg,.jpeg,.tiff" hidden>
+</div>
+
+
+<div class="divider"></div>
+
+<div class="render-size-block">
+
+    <span class="title">Render Size</span>
+
+    <div class="render-size-row">
+
+        <img src="assets/lINE.svg" class="rs-icon rotate">
+
+        <input type="number" class="rs-width" placeholder="W" list="sizePresets" min="1" max="1920" step="1">
+
+        <img src="assets/lINE.svg" class="rs-icon">
+
+        <input type="number" class="rs-height" placeholder="H" list="sizePresets" min="1" max="1080" step="1">
+
+    </div>
+<datalist id="sizePresets">
+<option value="1920">
+<option value="1280">
+<option value="1080">
+<option value="800">
+<option value="720">
+<option value="512">
+</datalist>
+
+</div>
+<button id="applySizeBtn" style="margin-top: 5px; padding: 5px 10px; cursor: pointer;">Apply Size</button>
+
+<div class="divider"></div>
+<button class="gif-render-btn">Render</button>
+
+
+<input
+    id="floatingSizeSlider"
+    type="range"
+    min="20"
+    max="1000"
+    value="120"
+    style="position:absolute;left:-9999px;"
+>
+
+<input
+    id="floatingLineHeightSlider"
+    type="range"
+    min="0.5"
+    max="7.5"
+    step="0.01"
+    value="1.2"
+    style="position:absolute;left:-9999px;"
+>
+<!-- پاپ‌آپ حمایتی -->
+<div id="support-popup">
+    <div class="popup-content">
+        <p>دوست گرامی<br>
+        خدمات این صفحه رایگان است<br>
+        اما اگر حمایت کنید می‌توانیم آن را بهتر کنیم و امکانات بیشتری در آن ارائه دهیم<br>
+        
+         <strong>البته اجباری نیست<br>
+    <br>
+ <a
+ href="https://donito.me/u-jez56"
+ target="_blank"
+ class="btn-confirm"
+>
+حمایت
+</a>
+
+    <br>   
+    <br> 
+          	هر که خواهد بدهد <br> هر که نخواهد ندهد<br>
+ </p>
+        
+        <div class="button-group" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+    <button id="saveForVideo" class="btn-confirm" style="background-color: #2196F3;">For Video Editors</button>
+    <button id="saveForWeb" class="btn-confirm" style="background-color: #09d621;">For Web/Social media (APNG)</button>
+    
+       
+</div>
+
+    </div>
+<div id="support-popup">
+    ...
+</div>
+
+<!-- Warning Modal -->
+<div id="warning-modal" class="warning-modal">
+
+    <div class="warning-box">
+
+        <div class="warning-title">
+            Warning
+        </div>
+
+        <div id="warning-message">
+            Invalid value
+        </div>
+
+        <button id="warning-ok">
+            OK
+        </button>
+
+    </div>
+
+</div>
+</div>
+
+          
