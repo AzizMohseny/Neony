@@ -401,14 +401,3 @@ document.getElementById(
         "warning-modal"
     ).style.display = "none";
 };
-if (!Number.isInteger(width))
-    showWarning("عرض باید عدد صحیح باشد.");
-
-if (!Number.isInteger(height))
-    showWarning("ارتفاع باید عدد صحیح باشد.");
-
-if (width > 1920)
-    showWarning("عرض نمی‌تواند بیشتر از 1920 باشد.");
-
-if (height > 1920)
-    showWarning("ارتفاع نمی‌تواند بیشتر از 1920 باشد.");
