@@ -353,7 +353,7 @@ font-size: 12px;
 }
 
 @font-face {
-    font-family: 'Parcham';
+    font-family: 'ParchamStroke';
     src: url('fonts/ParchamStroke.ttf') format('truetype');
 }
 
@@ -362,20 +362,24 @@ font-size: 12px;
     src: url('fonts/NP Naipol All in One_r.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Gloomy';
+    font-family: '/GloomyUnseenSingleLine-lg37Z';
     src: url('fonts/GloomyUnseenSingleLine-lg37Z.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Headstay';
+    font-family: '/HeadstaySingleLine-ywDmY';
     src: url('fonts/HeadstaySingleLine-ywDmY.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Saily';
+    font-family: 'The Saily';
     src: url('fonts/The Saily.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Znik';
+    font-family: 'Znikoslsvginot8-GOB3y';
     src: url('fonts/Znikoslsvginot8-GOB3y.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NEONIZED';
+    src: url('fonts/NEONIZED.ttf) format('truetype');
 }
 .size-row {
     display: flex;
