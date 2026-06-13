@@ -381,7 +381,3 @@ if (saveVideoBtn && saveWebBtn) {
         attachTooltip(saveWebBtn, 'save-web');
     }
 }
-ntById(
-        "warning-modal"
-    ).style.display = "none";
-};
