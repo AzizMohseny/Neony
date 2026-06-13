@@ -381,23 +381,7 @@ if (saveVideoBtn && saveWebBtn) {
         attachTooltip(saveWebBtn, 'save-web');
     }
 }
-
-function showWarning(message) {
-
-    document.getElementById(
-        "warning-message"
-    ).textContent = message;
-
-    document.getElementById(
-        "warning-modal"
-    ).style.display = "flex";
-}
-
-document.getElementById(
-    "warning-ok"
-).onclick = function() {
-
-    document.getElementById(
+ntById(
         "warning-modal"
     ).style.display = "none";
 };
