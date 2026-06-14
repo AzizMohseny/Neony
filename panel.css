@@ -598,9 +598,9 @@ input::-webkit-inner-spin-button {
 }
 #adVideo {
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     display: block;
-    border-radius: 8px;
 }
 // تستِ وجودِ دکمه
 console.log('Checking saveGifBtn:', saveGifBtn);
