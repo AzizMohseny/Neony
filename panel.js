@@ -68,7 +68,7 @@ if (textarea) {
     textarea.addEventListener("input", () => {
         let val = textarea.value.substring(0, 100);
         textarea.value = val;
-        updateStateAndRender({ text: val || "نئونستون" });
+        updateStateAndRender({ text: val || "Neony" });
     });
 }
 if (fontSelect) fontSelect.addEventListener("change", () => updateStateAndRender({ fontFamily: fontSelect.value }));
@@ -187,7 +187,7 @@ if (saveForVideo && typeof JSZip !== "undefined") {
         if (saveForVideo.disabled) return;
         closePopup();
 saveForVideo.disabled = true;
-showProgress("شروع رندر ZIP...");
+showProgress("Start Rener ZIP...");
         try {
             const zip = new JSZip();
             const totalFrames = 60;
@@ -210,14 +210,14 @@ showProgress("شروع رندر ZIP...");
                 zip.file(`frame_${String(i+1).padStart(3,'0')}.png`, blob);
                 await new Promise(r => setTimeout(r, 0));
             }
-            updateProgress(100, "در حال فشرده‌سازی...");
+            updateProgress(100, "Compressing...");
             const zipBlob = await zip.generateAsync({ type: "blob" });
             const link = document.createElement("a");
             link.download = `neon-frames-${Date.now()}.zip`;
             link.href = URL.createObjectURL(zipBlob);
             link.click();
             URL.revokeObjectURL(link.href);
-            alert("ZIP دانلود شد.");
+            alert("ZIP Downloaded");
         } catch (err) { alert("خطا: " + err.message); }
         finally {
             saveForVideo.disabled = false;
@@ -232,7 +232,7 @@ if (saveForWeb && typeof UPNG !== "undefined") {
         if (saveForWeb.disabled) return;
         closePopup();
         saveForWeb.disabled = true;
-	showProgress("شروع ساخت APNG...");
+	showProgress("Start of making APNG...");
         try {
             const totalFrames = 60;
             const delayMs = Math.round(5000 / totalFrames);
@@ -257,7 +257,7 @@ if (saveForWeb && typeof UPNG !== "undefined") {
                 framesData.push(new Uint8Array(imageData.data));
                 await new Promise(r => setTimeout(r, 0));
             }
-            saveForWeb.textContent = "در حال ساخت APNG...";
+            saveForWeb.textContent = "Under Making APNG...";
             const apngBuffer = UPNG.encode(framesData, canvasWidth, canvasHeight, 0, delays);
             const blob = new Blob([apngBuffer], { type: "image/apng" });
             const url = URL.createObjectURL(blob);
@@ -266,8 +266,8 @@ if (saveForWeb && typeof UPNG !== "undefined") {
             link.href = url;
             link.click();
             URL.revokeObjectURL(url);
-            alert("APNG دانلود شد.");
-        } catch (err) { alert("خطا: " + err.message); }
+            alert("APNG Downloaded");
+        } catch (err) { alert("Eror: " + err.message); }
         finally {
             saveForWeb.disabled = false;
             saveForWeb.textContent = "For Web/Social media (APNG)";
@@ -333,7 +333,7 @@ if (chooseBtn && fileInput) {
         const file = event.target.files[0];
         if (!file) return;
         if (!file.type.startsWith("image/")) {
-            alert("لطفاً یک فایل تصویری انتخاب کنید (png, jpg, jpeg, tiff)");
+            alert("Choose an image (png, jpg, jpeg, tiff)");
             return;
         }
         const reader = new FileReader();
@@ -342,11 +342,11 @@ if (chooseBtn && fileInput) {
             img.onload = () => {
                 currentBackgroundImage = img;
                 if (bgToggle && bgToggle.checked) scheduleRender();
-                console.log("تصویر پس‌زمینه با موفقیت بارگذاری شد");
+                console.log("Background image successfully loaded.");
             };
             img.onerror = () => {
-                console.error("خطا در بارگذاری تصویر");
-                alert("خطا در بارگذاری تصویر");
+                console.error("Error loading image");
+                alert("Error loading image");
             };
             img.src = e.target.result;
         };
@@ -363,8 +363,8 @@ const saveWebBtn = document.getElementById("saveForWeb");
 
 if (saveVideoBtn && saveWebBtn) {
     // متن‌های دلخواه خود را اینجا بنویسید
-    const videoTooltip = "مناسب برای ساخت ویدئو (پریمیر، افتر افکت، فاینال کات، داوینچی و ...)";
-    const webTooltip = "مناسب استفاده در وب و سوشال مدیا";
+    const videoTooltip = "For Video Editors (AdobePremiere, AdobeAfterEffects, FinalCut, DaVinciResolve, etc.)";
+    const webTooltip = "For web and social media.";
     
     // تنظیم title (تولتیپ پیش‌فرض مرورگر)
     saveVideoBtn.title = videoTooltip;
