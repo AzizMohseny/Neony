@@ -181,6 +181,7 @@ const saveForVideo = document.getElementById("saveForVideo");
 const saveForWeb = document.getElementById("saveForWeb");
 const adVideo = document.getElementById("adVideo");
 const adStatus = document.getElementById("adStatus");
+const renderButtons = document.getElementById("render-buttons");
 
 function closePopup() { if (supportPopup) supportPopup.style.display = "none"; }
 
@@ -309,7 +310,6 @@ function unlockRenderButtons() {
         adStatus.textContent = "رندر فعال شد";
     }
 }
-
 if (adVideo) {
 
     adVideo.addEventListener("ended", () => {
@@ -322,6 +322,9 @@ if (adVideo) {
 
 if (gifRenderBtn && supportPopup) {
     gifRenderBtn.onclick = () => { supportPopup.style.display = "flex"; };
+	if (renderButtons) {
+    renderButtons.style.display = "none";
+}
     supportPopup.onclick = (e) => { if (e.target === supportPopup) supportPopup.style.display = "none"; };
 }
 
