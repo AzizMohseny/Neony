@@ -59,6 +59,7 @@
 
 
 <div class="gif-row">
+	<div class="label">Neon<br>Type</div>
 	<div class="gif-box" data-effect="nx-t2"> <img src="assets/1.gif"></div>
 	<div class="gif-box" data-effect="nx-t2"><img src="assets/2.gif"></div>
 	<div class="gif-box" data-effect="nx-police"><img src="assets/P.gif"></div>
@@ -94,19 +95,12 @@
 <div class="divider"></div>
 
 <div class="render-size-block">
-
     <span class="title">Render Size</span>
-
     <div class="render-size-row">
-
         <img src="assets/lINE.svg" class="rs-icon rotate">
-
         <input type="number" class="rs-width" placeholder="W" list="sizePresets" min="1" max="1920" step="1">
-
         <img src="assets/lINE.svg" class="rs-icon">
-
         <input type="number" class="rs-height" placeholder="H" list="sizePresets" min="1" max="1080" step="1">
-
     </div>
 <datalist id="sizePresets">
 <option value="1920">
@@ -119,10 +113,8 @@
 
 </div>
 <button id="applySizeBtn" style="margin-top: 5px; padding: 5px 10px; cursor: pointer;">Apply Size</button>
-
 <div class="divider"></div>
 <button class="gif-render-btn">Render</button>
-
 
 <input
     id="floatingSizeSlider"
@@ -132,7 +124,6 @@
     value="120"
     style="position:absolute;left:-9999px;"
 >
-
 <input
     id="floatingLineHeightSlider"
     type="range"
