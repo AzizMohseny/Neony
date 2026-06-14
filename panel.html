@@ -169,25 +169,32 @@
 </div>
 
     </div>
-<div id="support-popup">
-    ...
-</div>
 
-<!-- Warning Modal -->
-<div id="warning-modal" class="warning-modal">
+	<div id="support-popup" class="popup">
 
-    <div class="warning-box">
+    <div class="popup-content">
 
-        <div class="warning-title">
-            Warning
+        <video
+            id="adVideo"
+            width="100%"
+            controls
+            autoplay
+            playsinline>
+
+            <source src="assets/ad.mp4" type="video/mp4">
+
+        </video>
+
+        <div id="adStatus">
+            در حال نمایش تبلیغ...
         </div>
 
-        <div id="warning-message">
-            Invalid value
-        </div>
+        <button id="saveForVideo" disabled>
+            For Video Editors
+        </button>
 
-        <button id="warning-ok">
-            OK
+        <button id="saveForWeb" disabled>
+            For Web/Social Media
         </button>
 
     </div>
