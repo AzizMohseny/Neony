@@ -478,12 +478,13 @@ input::-webkit-inner-spin-button {
 }
 .template-row {
   display: flex;
+  align-items: center;
   gap: 10px;
-  justify-content: left;
+  flex-wrap: nowrap;
 }
 
 .template-box {
-  width: 32px;      /* اندازه دکمه */
+  width: 32px;
   height: 32px;
   cursor: pointer;
   border: 1px solid #444;
@@ -491,6 +492,9 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
   transition: transform 0.2s ease;
 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .template-box:hover {
