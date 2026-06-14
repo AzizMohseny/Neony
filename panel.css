@@ -87,15 +87,6 @@ font-size: 12px;
     margin-bottom:5px;
 }
 
-.render-btn{
-    width:100%;
-    background:#5ede72;
-    border:1px;
-    border-radius:4px;
-    padding:8px;
-    color:white;
-    cursor:pointer;
-}
 
 
 /* نسخه صحیح مانیتور */
@@ -332,35 +323,15 @@ font-size: 12px;
     outline: none;
 }
 
-#saveForVideo,
-#saveForWeb {
-    width: 25%;
-    height: 40px;
+.render-buttons {
+    display: flex;
+    gap: 10px;
     margin-top: 10px;
-    background-color: #09d621;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.1s;
-
-    box-shadow: 0 5px 0 #1e7e34;
 }
 
-#saveForVideo:active,
-#saveForWeb:active {
-    box-shadow: 0 2px 0 #059a17;
-    transform: translateY(3px);
+.render-buttons .render-btn {
+    flex: 1;
 }
-
-#saveForVideo:focus,
-#saveForWeb:focus {
-    outline: none;
-}
-
 @font-face {
     font-family: 'Charmline';
     src: url('fonts/CharmlineScriptPersonalUse-17EB.otf') format('opentype');
