@@ -1,11 +1,9 @@
 // panel.js - Minimal Complete Version
 console.log("panel.js loaded");
 const TOOLTIP_TEXTS = {
-    "align-left": "چپ‌چین", "align-center": "وسط‌چین", "align-right": "راست‌چین",
-    "choose-image": "انتخاب تصویر", "apply-size": "اعمال اندازه", "gif-render": "ساخت گیف",
-    "effect-item": "اعمال افکت", "nx-t1": "کلاسیک", "nx-t2": "LED", 
-    "nx-police": "پلیس", "flicker": "فلیکر", "starter": "استارت", "blink": "چشمک‌زن",
-    "crazy": "چرتی", "lantern": "فانوسی"
+    "nx-t1": "Classic", "nx-t2": "LED", 
+    "nx-police": "police", "flicker": "flicker", "starter": "start", "blink": "blink",
+    "crazy": "slumbery", "lantern": "lantern"
 };
 
 
@@ -25,7 +23,7 @@ const bgToggle = document.getElementById("bgImageToggle");
 const chooseBtn = document.getElementById("chooseImageBtn");
 const fileInput = document.getElementById("bgImageInput");
 const alignButtons = document.querySelectorAll(".icon-btn[data-align]");
-const templateBoxes = document.querySelectorAll(".template-box");
+const templateBoxes = document.querySelectorAll('.gif-box[data-template]');
 const effectButtons = document.querySelectorAll(".gif-box");
 
 let currentState = {
