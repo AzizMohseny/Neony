@@ -323,20 +323,38 @@ font-size: 12px;
     outline: none;
 }
 
-.render-buttons {
-  width: 100%;
-    height: 40px;           /* ارتفاع فیکس شده و کمتر */
-    margin-top: 20px;       /* فاصله از المان بالایی که تو هم نرن */
-    background-color: #09d621; 
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
+.render-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:15px;
 }
 
-.render-buttons .render-btn {
-    flex: 1;
+.render-btn{
+    width:25%;
+    height:40px;
+
+    background:#09d621;
+    color:white;
+
+    border:none;
+    border-radius:6px;
+
+    cursor:pointer;
+
+    opacity:0.5;
+    transition:opacity .3s;
 }
+
+.render-btn:disabled{
+    opacity:0.5;
+    cursor:default;
+}
+
+.render-btn:not(:disabled){
+    opacity:1;
+}
+
 @font-face {
     font-family: 'Charmline';
     src: url('fonts/CharmlineScriptPersonalUse-17EB.otf') format('opentype');
