@@ -571,7 +571,8 @@ input::-webkit-inner-spin-button {
     color: #000 !important;         /* رنگ متن مشکی */
     padding: 30px;
     border-radius: 10px;
-    max-width: 600px;
+    width: 75vw;
+    max-width: 1000px;
     text-align: center;
     border: 1px solid #ccc;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -594,7 +595,12 @@ input::-webkit-inner-spin-button {
     border-radius: 4px;
     margin: 5px;
 }
-
+#adVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
 // تستِ وجودِ دکمه
 console.log('Checking saveGifBtn:', saveGifBtn);
 if (!saveGifBtn) {
