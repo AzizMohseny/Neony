@@ -466,7 +466,7 @@ input::-webkit-inner-spin-button {
 
 /* چیدمان مرتب آیکون و ورودی */
 .size-input-group {
-    display: inline-flex;
+    display:flex;
     align-items: center;
     gap: 5px;
     margin-right: 10px;
