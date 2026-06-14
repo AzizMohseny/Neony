@@ -179,6 +179,8 @@ const gifRenderBtn = document.querySelector(".gif-render-btn");
 const supportPopup = document.getElementById("support-popup");
 const saveForVideo = document.getElementById("saveForVideo");
 const saveForWeb = document.getElementById("saveForWeb");
+const adVideo = document.getElementById("adVideo");
+const adStatus = document.getElementById("adStatus");
 
 function closePopup() { if (supportPopup) supportPopup.style.display = "none"; }
 
@@ -296,6 +298,26 @@ function updateProgress(percent, text = "") {
 function hideProgress() {
     if (!globalProgress) return;
     globalProgress.style.display = "none";
+}
+
+function unlockRenderButtons() {
+
+    saveForVideo.disabled = false;
+    saveForWeb.disabled = false;
+
+    if (adStatus) {
+        adStatus.textContent = "رندر فعال شد";
+    }
+}
+
+if (adVideo) {
+
+    adVideo.addEventListener("ended", () => {
+
+        unlockRenderButtons();
+
+    });
+
 }
 
 if (gifRenderBtn && supportPopup) {
