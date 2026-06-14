@@ -139,36 +139,36 @@
     value="1.2"
     style="position:absolute;left:-9999px;"
 >
-<!-- پاپ‌آپ حمایتی -->
-<div id="support-popup">
-    <div class="popup-content">
-        <p>دوست گرامی<br>
-        خدمات این صفحه رایگان است<br>
-        اما اگر حمایت کنید می‌توانیم آن را بهتر کنیم و امکانات بیشتری در آن ارائه دهیم<br>
-        
-         <strong>البته اجباری نیست<br>
-    <br>
- <a
- href="https://donito.me/u-jez56"
- target="_blank"
- class="btn-confirm"
->
-حمایت
-</a>
+<div id="support-popup" class="popup">
 
-    <br>   
-    <br> 
-          	هر که خواهد بدهد <br> هر که نخواهد ندهد<br>
- </p>
-        
-        <div class="button-group" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
-    <button id="saveForVideo" class="btn-confirm" style="background-color: #2196F3;">For Video Editors</button>
-    <button id="saveForWeb" class="btn-confirm" style="background-color: #09d621;">For Web/Social media (APNG)</button>
-    
-       
-</div>
+    <div class="popup-content">
+
+        <video
+            id="adVideo"
+            width="100%"
+            controls
+            autoplay
+            playsinline>
+
+            <source src="assets/ad.mp4" type="video/mp4">
+
+        </video>
+
+        <div id="adStatus">
+            در حال نمایش تبلیغ...
+        </div>
+
+        <button id="saveForVideo" disabled>
+            For Video Editors
+        </button>
+
+        <button id="saveForWeb" disabled>
+            For Web/Social Media
+        </button>
 
     </div>
+
+</div>
 
 	<div id="support-popup" class="popup">
 
