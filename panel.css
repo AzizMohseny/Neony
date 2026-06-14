@@ -195,9 +195,6 @@ font-size: 12px;
     transition: none;
 }
 
-
-
-
 .align-line-row {
     display: flex;
     align-items: center;
@@ -594,6 +591,10 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     border-radius: 4px;
     margin: 5px;
+}
+
+#render-buttons {
+    display: none;
 }
 #adVideo {
     width: 100%;
