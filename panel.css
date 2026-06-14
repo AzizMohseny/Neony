@@ -477,10 +477,10 @@ input::-webkit-inner-spin-button {
     color: #666;
 }
 .template-row {
-  display: flex;
+  display: flex !important;
+  flex-wrap: nowrap !important;
   align-items: center;
   gap: 10px;
-  flex-wrap: nowrap;
 }
 
 .template-box {
