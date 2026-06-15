@@ -256,7 +256,7 @@ const policeColor =
     getPoliceColor: function() {
         if (this._policeStart === undefined) this._policeStart = performance.now();
         const elapsed = performance.now() - this._policeStart;
-        const cycleMs = 1250; // 1.25 ثانیه
+        const cycleMs = 2500; // 2.5 ثانیه
         const halfCycle = cycleMs / 2;
         const t = (elapsed % cycleMs);
         if (t < halfCycle) return "#ff0000";
