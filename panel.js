@@ -27,7 +27,7 @@ const templateBoxes = document.querySelectorAll('.gif-box[data-template]');
 const effectButtons = document.querySelectorAll(".gif-box");
 
 let currentState = {
-    text: "نئونستون",
+    text: "Neony",
     fontFamily: "Abnoos",
     fontSize: 120,
     neonColor: "#00eaff",
