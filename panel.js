@@ -346,7 +346,10 @@ function attachTooltip(element, textKey) {
 }
 document.querySelectorAll('[data-align]').forEach(el => attachTooltip(el, `align-${el.dataset.align}`));
 document.querySelectorAll('.template-box').forEach(el => attachTooltip(el, el.dataset.template));
-document.querySelectorAll('.gif-box').forEach(el => attachTooltip(el, el.dataset.effect));
+document.querySelectorAll('.gif-box[data-effect]')
+    .forEach(el => attachTooltip(el, el.dataset.effect));
+document.querySelectorAll('.gif-box[data-template]')
+    .forEach(el => attachTooltip(el, el.dataset.template));
 if (document.querySelector('#chooseImageBtn')) attachTooltip(document.querySelector('#chooseImageBtn'), 'choose-image');
 if (document.querySelector('#applySizeBtn')) attachTooltip(document.querySelector('#applySizeBtn'), 'apply-size');
 if (document.querySelector('.gif-render-btn')) attachTooltip(document.querySelector('.gif-render-btn'), 'gif-render');
