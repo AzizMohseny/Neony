@@ -205,7 +205,7 @@ const policeColor =
     color: hexToRgba(neonColor, 0.6),
     stroke: true,
     strokeWidth: 0.08,
-    blend: "normal",
+    blend: "screen",
 	pulse: true
 },
 
