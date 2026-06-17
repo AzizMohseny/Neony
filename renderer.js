@@ -202,7 +202,7 @@ const policeColor =
 
  {x: 0, y: 0,
     blur: emToPx(0.02),
-    color: hexToRgba(neonColor, 0.6),
+    color: hexToRgba(neonColor, 0.4),
     stroke: true,
     strokeWidth: 0.08,
     blend: "screen",
